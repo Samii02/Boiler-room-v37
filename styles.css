@@ -4,21 +4,25 @@ body{
 
 header{
     background-color: rgb(163, 163, 163);
+    border-radius: 10px;
+    border: 2px solid black;
     padding: 5px;
     margin: 10px;
     margin-bottom: 25px;
     max-width: 100%;
     font-size: 125%;
+    top: 0;
+    position: sticky;
 }
 
 nav{
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
 main{
     background-color: rgb(163, 163, 163);
+    border-radius: 10px;
     padding: 10px;
     margin: 10px;
     margin-bottom: 40px;
@@ -27,6 +31,7 @@ main{
 
 section{
     background-color: aqua;
+    border-radius: 10px;
     padding: 10px;
     margin: 10px;
     margin-bottom: 25px;
@@ -35,6 +40,7 @@ section{
 
 article{
     background-color: aquamarine;
+    border-radius: 10px;
     padding: 10px;
     margin: 10px;
     margin-bottom: 25px;
@@ -43,17 +49,38 @@ article{
 
 footer{
     background-color: beige;
+    border-radius: 10px;
     padding: 10px;
     margin: 10px;
     bottom: 0;
 }
 
-@media (min-width: 320) and (max-width: 480px){
+@media (min-width: 320px) and (max-width: 480px){
 
+    body{
+        font-size: 14px;
+    }
+
+    nav{
+        flex-direction: column;
+        font-size: 90%;
+    }
+
+    header, main, section, article, footer{
+        padding: 10px;
+        margin: 10px;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 768px){
 
+    body{
+        font-size: 16px;
+    }
+
+    nav{
+        
+    }
 }
 
 @media (min-width: 1025px) and (max-width: 1200px){
