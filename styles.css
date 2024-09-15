@@ -13,6 +13,7 @@ header{
     font-size: 125%;
     top: 0;
     position: sticky;
+    z-index: 1000;
 }
 
 nav{
@@ -30,20 +31,21 @@ main{
     border-radius: 10px;
     margin-bottom: 40px;
     max-width: 100%;
+    position: relative;
+
 }
 
-section{
-    background-color: aqua;
+section, article{
+    background-color: rgb(245, 245, 245);
     border-radius: 10px;
     margin-bottom: 25px;
     max-width: 100%;
+    position: absolute; 
+    box-sizing: border-box;
 }
 
 article{
-    background-color: aquamarine;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    max-width: 100%;
+    background-color: rgb(245, 245, 245);
 }
 
 footer{
@@ -67,6 +69,10 @@ footer{
         padding: 8px;
         margin: 8px;
     }
+
+    section, article{
+        position: static;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 768px){
@@ -80,12 +86,75 @@ footer{
         font-size: 100%;
     }
 
-    main{
-        
+    section, article{
+        width: 45%;
+        position: relative;
     }
 
+    section:nth-of-type(2){
+        left: 49%;
+        top: 10px;
+        padding: 4%;
+        position: absolute;
+    }
+
+    article:nth-of-type(2){
+        left: 50%;
+        top: 386px;
+        padding: 4%;
+        position: absolute;
+    }
+
+    header, main, section, article, footer{
+        padding: 10px;
+        margin: 10px;
+    }
 }
 
 @media (min-width: 1025px) and (max-width: 1200px){
 
+    body{
+        font-size: 16px;
+    }
+    
+    nav{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px 10px 20px;
+        font-size: 100%;
+        position: static;
+    }
+
+    section, article{
+        width: 22%;
+        position: relative;
+        margin-bottom: 10%;
+    }
+
+    section:nth-of-type(1){
+        top: 10px;
+        left: 0;
+    }
+
+    section:nth-of-type(2) {
+        top: 20px;
+        left: 25%;
+        position: absolute  ;
+    }
+
+    article:nth-of-type(1) {
+        top: 20px;
+        left: 50%;
+        position: absolute;
+    }
+
+    article:nth-of-type(2) {
+        top: 20px;
+        left: 75%;
+        position: absolute;
+    }
+
+    footer{
+        position: fixed;
+    }
 }
