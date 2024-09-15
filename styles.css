@@ -4,9 +4,11 @@ body{
 
 header{
     background-color: rgb(163, 163, 163);
-    padding: 10px;
+    padding: 5px;
     margin: 10px;
+    margin-bottom: 25px;
     max-width: 100%;
+    font-size: 125%;
 }
 
 nav{
@@ -16,9 +18,10 @@ nav{
 }
 
 main{
-    background-color: antiquewhite;
+    background-color: rgb(163, 163, 163);
     padding: 10px;
     margin: 10px;
+    margin-bottom: 40px;
     max-width: 100%;
 }
 
@@ -26,6 +29,7 @@ section{
     background-color: aqua;
     padding: 10px;
     margin: 10px;
+    margin-bottom: 25px;
     max-width: 100%;
 }
 
@@ -33,6 +37,7 @@ article{
     background-color: aquamarine;
     padding: 10px;
     margin: 10px;
+    margin-bottom: 25px;
     max-width: 100%;
 }
 
@@ -41,7 +46,6 @@ footer{
     padding: 10px;
     margin: 10px;
     bottom: 0;
-    position: fixed;
 }
 
 @media (min-width: 320) and (max-width: 480px){
